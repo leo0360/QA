@@ -9,7 +9,7 @@ phases:
     commands:
       - pwd
       - ls -la
-      - aws s3 rm --recursive s3://sevenvista-test
+      - aws s3 sync ./ s3://sevenvista-test --delete
 artifacts:
   files:
     - '**/*'
